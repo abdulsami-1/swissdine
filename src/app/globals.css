@@ -1,0 +1,58 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Primary */
+  --color-charcoal: #1A1A1A;
+  --color-ivory: #F5F3EF;
+  --color-gold: #C9A961;
+  /* Secondary */
+  --color-slate: #6B7280;
+  --color-olive: #4A5240;
+  --color-cream: #FFFEF9;
+  /* System */
+  --color-success: #2D5F3F;
+  --color-error: #8B3A3A;
+  /* Spacing (8px grid) */
+  --space-xs: 8px;
+  --space-s: 16px;
+  --space-m: 32px;
+  --space-l: 64px;
+  --space-xl: 128px;
+  /* Typography */
+  --heading-line-height: 1.2;
+  --body-line-height: 1.6;
+  --blockquote-size: 20px;
+  --caption-size: 12px;
+  --caption-tracking: 0.1em;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply bg-ivory text-charcoal font-sans antialiased;
+    font-size: clamp(14px, 2vw, 16px);
+    line-height: var(--body-line-height);
+  }
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-serif font-semibold;
+    line-height: var(--heading-line-height);
+  }
+  /* Focus visible for accessibility */
+  *:focus-visible {
+    @apply outline-2 outline-offset-2 outline-gold;
+  }
+  /* Skip to content link */
+  .skip-to-content {
+    @apply absolute left-4 top-4 -translate-y-24 bg-gold text-charcoal px-4 py-2 font-medium transition-transform focus:translate-y-0 z-50;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
