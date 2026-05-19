@@ -50,6 +50,11 @@ export const metadata: Metadata = {
     index: true,
     follow: true,
   },
+  icons: {
+    icon: '/logo-counter.svg',
+    shortcut: '/logo-counter.svg',
+    apple: '/logo-counter.svg',
+  },
 };
 
 export default function RootLayout({

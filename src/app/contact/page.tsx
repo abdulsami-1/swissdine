@@ -94,7 +94,7 @@ export default function ContactPage() {
             <p>
               <strong className="text-charcoal">Address</strong>
               <br />
-              [Street Name & Number]
+              Bahnhofplatz 15
               <br />
               8001 Zürich
               <br />
